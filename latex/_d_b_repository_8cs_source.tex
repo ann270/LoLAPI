@@ -1,0 +1,35 @@
+\doxysection{DBRepository.\+cs}
+\hypertarget{_d_b_repository_8cs_source}{}\label{_d_b_repository_8cs_source}\index{Models/DBRepository.cs@{Models/DBRepository.cs}}
+\mbox{\hyperlink{_d_b_repository_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Amazon.DynamoDBv2.DataModel;}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_lo_l_a_p_i_1_1_models}{LoLAPI.Models}};}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00005}00005\ [DynamoDBTable(\textcolor{stringliteral}{"{}schedule-\/db"{}})]}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00006}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{00006}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00008}00008\ \ \ \ \ [DynamoDBHashKey(\textcolor{stringliteral}{"{}RequestID"{}})]}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00009}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_a624c05f1a890c654de2aa8cc7fb83049}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_a624c05f1a890c654de2aa8cc7fb83049}{RequestID}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00010}00010\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00011}00011\ \ \ \ \ [DynamoDBRangeKey(\textcolor{stringliteral}{"{}UserID"{}})]}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00012}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_abb06e206b887d96295543192021ee087}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_abb06e206b887d96295543192021ee087}{UserID}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00013}00013\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00014}00014\ \ \ \ \ [DynamoDBProperty(\textcolor{stringliteral}{"{}StartTime"{}})]}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00015}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_abc4bb659c0bc3db80f64e53923cebcb6}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_abc4bb659c0bc3db80f64e53923cebcb6}{StartTime}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00016}00016\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00017}00017\ \ \ \ \ [DynamoDBProperty(\textcolor{stringliteral}{"{}BlockName"{}})]}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00018}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_a5b95665b9ecf959172f4badcffe06e01}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_a5b95665b9ecf959172f4badcffe06e01}{BlockName}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00019}00019\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00020}00020\ \ \ \ \ [DynamoDBProperty(\textcolor{stringliteral}{"{}LeagueName"{}})]}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00021}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_a3039494e79772e16e09e63c7ac8acf03}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_a3039494e79772e16e09e63c7ac8acf03}{LeagueName}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00023}00023\ \ \ \ \ [DynamoDBProperty(\textcolor{stringliteral}{"{}MatchTeams"{}})]}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00024}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_aaba1643b0fafd40066d78c1ff2874ed6}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ List<string>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_aaba1643b0fafd40066d78c1ff2874ed6}{MatchTeams}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00025}00025\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00026}00026\ \ \ \ \ [DynamoDBProperty(\textcolor{stringliteral}{"{}MatchID"{}})]}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00027}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_a221b259e42f7db3d9cce4021ba1b1b5d}{00027}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository_a221b259e42f7db3d9cce4021ba1b1b5d}{MatchID}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{_d_b_repository_8cs_source_l00029}00029\ }
+
+\end{DoxyCode}

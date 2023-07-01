@@ -1,0 +1,104 @@
+\doxysection{Lo\+LAPI.\+Clients.\+Champion\+Skins\+Client Class Reference}
+\hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}{}\label{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}\index{LoLAPI.Clients.ChampionSkinsClient@{LoLAPI.Clients.ChampionSkinsClient}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a09cfd44662c577de5e8ff2d9d867e9e7}{Champion\+Skins\+Client}} ()
+\item 
+async Task$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_champion_skins}{Champion\+Skins}} $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_ae61c4783bd8ceef5304c8ee961a5a225}{Get\+Champion\+Skins}} (string name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Http\+Client \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}{\+\_\+client}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a7d529a93366c83dba82523d286f75c29}{\+\_\+address}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_champion_skins_client_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_champion_skins_client_8cs_source}{Champion\+Skins\+Client.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a09cfd44662c577de5e8ff2d9d867e9e7}\label{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a09cfd44662c577de5e8ff2d9d867e9e7} 
+\index{LoLAPI.Clients.ChampionSkinsClient@{LoLAPI.Clients.ChampionSkinsClient}!ChampionSkinsClient@{ChampionSkinsClient}}
+\index{ChampionSkinsClient@{ChampionSkinsClient}!LoLAPI.Clients.ChampionSkinsClient@{LoLAPI.Clients.ChampionSkinsClient}}
+\doxysubsubsection{\texorpdfstring{ChampionSkinsClient()}{ChampionSkinsClient()}}
+{\footnotesize\ttfamily Lo\+LAPI.\+Clients.\+Champion\+Skins\+Client.\+Champion\+Skins\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_champion_skins_client_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_champion_skins_client_8cs_source}{Champion\+Skins\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a7d529a93366c83dba82523d286f75c29}{\_address}}\ =\ Constants.ChampionSkinsAddress;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}{\_client}}\ =\ \textcolor{keyword}{new}\ HttpClient();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \_client.BaseAddress\ =\ \textcolor{keyword}{new}\ Uri(\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a7d529a93366c83dba82523d286f75c29}{\_address}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}{\_client}}.DefaultRequestHeaders.Add(\textcolor{stringliteral}{"{}X-\/RapidAPI-\/Key"{}},\ \textcolor{stringliteral}{"{}69d7dc43d6msh39a8df6283d60e1p11c354jsn4ef5d9f548cd"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}{\_client}}.DefaultRequestHeaders.Add(\textcolor{stringliteral}{"{}X-\/RapidAPI-\/Host"{}},\ \textcolor{stringliteral}{"{}league-\/of-\/legends-\/champions.p.rapidapi.com"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_ae61c4783bd8ceef5304c8ee961a5a225}\label{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_ae61c4783bd8ceef5304c8ee961a5a225} 
+\index{LoLAPI.Clients.ChampionSkinsClient@{LoLAPI.Clients.ChampionSkinsClient}!GetChampionSkins@{GetChampionSkins}}
+\index{GetChampionSkins@{GetChampionSkins}!LoLAPI.Clients.ChampionSkinsClient@{LoLAPI.Clients.ChampionSkinsClient}}
+\doxysubsubsection{\texorpdfstring{GetChampionSkins()}{GetChampionSkins()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_champion_skins}{Champion\+Skins}} $>$ Lo\+LAPI.\+Clients.\+Champion\+Skins\+Client.\+Get\+Champion\+Skins (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_champion_skins_client_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_champion_skins_client_8cs_source}{Champion\+Skins\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}{\_client}}.GetAsync(\$\textcolor{stringliteral}{"{}champions/en-\/us/\{name\}"{}});}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ response.EnsureSuccessStatusCode();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ var\ content\ =\ response.Content.ReadAsStringAsync().Result;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ var\ result\ =\ JsonConvert.DeserializeObject<\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_champion_skins}{ChampionSkins}}>(content);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a7d529a93366c83dba82523d286f75c29}\label{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a7d529a93366c83dba82523d286f75c29} 
+\index{LoLAPI.Clients.ChampionSkinsClient@{LoLAPI.Clients.ChampionSkinsClient}!\_address@{\_address}}
+\index{\_address@{\_address}!LoLAPI.Clients.ChampionSkinsClient@{LoLAPI.Clients.ChampionSkinsClient}}
+\doxysubsubsection{\texorpdfstring{\_address}{\_address}}
+{\footnotesize\ttfamily string Lo\+LAPI.\+Clients.\+Champion\+Skins\+Client.\+\_\+address\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_champion_skins_client_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_champion_skins_client_8cs_source}{Champion\+Skins\+Client.\+cs}}.
+
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}\label{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa} 
+\index{LoLAPI.Clients.ChampionSkinsClient@{LoLAPI.Clients.ChampionSkinsClient}!\_client@{\_client}}
+\index{\_client@{\_client}!LoLAPI.Clients.ChampionSkinsClient@{LoLAPI.Clients.ChampionSkinsClient}}
+\doxysubsubsection{\texorpdfstring{\_client}{\_client}}
+{\footnotesize\ttfamily Http\+Client Lo\+LAPI.\+Clients.\+Champion\+Skins\+Client.\+\_\+client\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_champion_skins_client_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_champion_skins_client_8cs_source}{Champion\+Skins\+Client.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Clients/\mbox{\hyperlink{_champion_skins_client_8cs}{Champion\+Skins\+Client.\+cs}}\end{DoxyCompactItemize}

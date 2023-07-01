@@ -1,0 +1,354 @@
+\doxysection{Lo\+LAPI.\+Controllers.\+Lo\+LController Class Reference}
+\hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller}{}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller}\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+
+
+Inheritance diagram for Lo\+LAPI.\+Controllers.\+Lo\+LController\+:
+% FIG 0
+
+
+Collaboration diagram for Lo\+LAPI.\+Controllers.\+Lo\+LController\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_aa07d13fa488a35a2fc7576de2ed4e8f4}{Lo\+LController}} (ILogger$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller}{Lo\+LController}} $>$ logger, \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client}{Player\+Details\+Client}} player\+Details\+Client, \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client}{Schedule\+Client}} schedule\+Client, \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client}{IDynamo\+Db\+Client}} dynamo\+Db\+Client, \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_you_tube_client}{You\+Tube\+Client}} you\+Tube\+Client, \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client}{Open\+AIClient}} open\+Ai\+Client, \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}{Champion\+Skins\+Client}} champion\+Skins\+Client)
+\item 
+async Task$<$ List$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_player_details}{Player\+Details}} $>$ $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a121538405273cb77ad2c2b1ef4d1e7bf}{Get\+Player\+Details}} (\mbox{[}From\+Query\mbox{]} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_player_parameters}{Player\+Parameters}} parameters)
+\item 
+async Task$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_champion_skins}{Champion\+Skins}} $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_af307d6b13c8f9758ce59825f30a42652}{Get\+Champion\+Skins}} (\mbox{[}From\+Query\mbox{]} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_champion_skins_parameters}{Champion\+Skins\+Parameters}} champion\+Skins\+Parameters)
+\item 
+async Task$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_esports_schedule}{Esports\+Schedule}} $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a1400e3d80fc246549aa77fc6616a6f8d}{Get\+Schedule}} ()
+\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3a73ff25907fd54a90e81c3d251dd5f1}{Add\+To\+Db}} (\mbox{[}From\+Body\mbox{]} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository, \mbox{[}From\+Services\mbox{]} IHttp\+Context\+Accessor http\+Context\+Accessor)
+\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_afcbf4608c71deecd697ab78fdef9d121}{Get\+Data\+From\+DB}} (string request\+ID, string user\+ID)
+\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a56ec859577e30957f99ff3265c4eabc5}{Delete\+Data\+From\+DB}} (string request\+ID, string user\+ID)
+\item 
+async Task$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_you_tube_repository}{You\+Tube\+Repository}} $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a04ddce945b6f7019e2e7f9c520dad7cb}{Get\+You\+Tube\+Video}} (\mbox{[}From\+Query\mbox{]} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_you_tube_parameters}{You\+Tube\+Parameters}} parameters)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_open_ai_response}{Open\+Ai\+Response}} $>$ $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_aa580e53409bae6410964afcbbc6bb7ad}{Open\+Ai}} (\mbox{[}From\+Body\mbox{]} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_open_ai_repository}{Open\+Ai\+Repository}} open\+Ai\+Repository)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a7530c067158f737744fbbf00d037bf96}{Parse\+Content\+From\+Swagger\+Response}} (string swagger\+Response)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly ILogger$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller}{Lo\+LController}} $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ae33911536db8d85530ec9479d5b87178}{\+\_\+logger}}
+\item 
+readonly \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client}{Player\+Details\+Client}} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a88a06a25dd8b6374dbf66530dfad9906}{\+\_\+player\+Details}}
+\item 
+readonly \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client}{Schedule\+Client}} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a89d445a192e896adb5109c487ab9fa1e}{\+\_\+schedule\+Client}}
+\item 
+readonly \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client}{IDynamo\+Db\+Client}} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}{\+\_\+dynamo\+Db\+Client}}
+\item 
+readonly \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_you_tube_client}{You\+Tube\+Client}} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ab49ec546c697e0d5e8743f1401c99b3b}{\+\_\+you\+Tube\+Client}}
+\item 
+readonly \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}{Champion\+Skins\+Client}} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_abe77ffb1bd1808de50cebf9b0c899f28}{\+\_\+champion\+Skins\+Client}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_aa07d13fa488a35a2fc7576de2ed4e8f4}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_aa07d13fa488a35a2fc7576de2ed4e8f4} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!LoLController@{LoLController}}
+\index{LoLController@{LoLController}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{LoLController()}{LoLController()}}
+{\footnotesize\ttfamily Lo\+LAPI.\+Controllers.\+Lo\+LController.\+Lo\+LController (\begin{DoxyParamCaption}\item[{ILogger$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller}{Lo\+LController}} $>$}]{logger,  }\item[{\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client}{Player\+Details\+Client}}}]{player\+Details\+Client,  }\item[{\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client}{Schedule\+Client}}}]{schedule\+Client,  }\item[{\mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client}{IDynamo\+Db\+Client}}}]{dynamo\+Db\+Client,  }\item[{\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_you_tube_client}{You\+Tube\+Client}}}]{you\+Tube\+Client,  }\item[{\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client}{Open\+AIClient}}}]{open\+Ai\+Client,  }\item[{\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}{Champion\+Skins\+Client}}}]{champion\+Skins\+Client }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ae33911536db8d85530ec9479d5b87178}{\_logger}}\ =\ logger;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a88a06a25dd8b6374dbf66530dfad9906}{\_playerDetails}}\ =\ playerDetailsClient;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a89d445a192e896adb5109c487ab9fa1e}{\_scheduleClient}}\ =\ scheduleClient;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}{\_dynamoDbClient}}\ =\ dynamoDbClient;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ab49ec546c697e0d5e8743f1401c99b3b}{\_youTubeClient}}\ =\ youTubeClient;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_abe77ffb1bd1808de50cebf9b0c899f28}{\_championSkinsClient}}\ =\ championSkinsClient;}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3a73ff25907fd54a90e81c3d251dd5f1}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3a73ff25907fd54a90e81c3d251dd5f1} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!AddToDb@{AddToDb}}
+\index{AddToDb@{AddToDb}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{AddToDb()}{AddToDb()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Lo\+LAPI.\+Controllers.\+Lo\+LController.\+Add\+To\+Db (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Body\mbox{]} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}]{db\+Repository,  }\item[{\mbox{[}\+From\+Services\mbox{]} IHttp\+Context\+Accessor}]{http\+Context\+Accessor }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00052}{52}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ RequestID\ =\ httpContextAccessor.HttpContext.TraceIdentifier;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ dbRepository.RequestID\ =\ RequestID;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}{\_dynamoDbClient}}.\mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_a14a230379f1c40725ea157f5a9a12108}{PostDataToBd}}(dbRepository);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok();}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a56ec859577e30957f99ff3265c4eabc5}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a56ec859577e30957f99ff3265c4eabc5} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!DeleteDataFromDB@{DeleteDataFromDB}}
+\index{DeleteDataFromDB@{DeleteDataFromDB}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{DeleteDataFromDB()}{DeleteDataFromDB()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Lo\+LAPI.\+Controllers.\+Lo\+LController.\+Delete\+Data\+From\+DB (\begin{DoxyParamCaption}\item[{string}]{request\+ID,  }\item[{string}]{user\+ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}\ dbRepository\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ RequestID\ =\ requestID,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ UserID\ =\ userID}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}{\_dynamoDbClient}}.\mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_aaa8548f5df3d2f6e72bd19b2ad28b6f8}{DeleteDataFromDB}}(dbRepository);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok();}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 3
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_af307d6b13c8f9758ce59825f30a42652}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_af307d6b13c8f9758ce59825f30a42652} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!GetChampionSkins@{GetChampionSkins}}
+\index{GetChampionSkins@{GetChampionSkins}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{GetChampionSkins()}{GetChampionSkins()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_champion_skins}{Champion\+Skins}} $>$ Lo\+LAPI.\+Controllers.\+Lo\+LController.\+Get\+Champion\+Skins (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Query\mbox{]} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_champion_skins_parameters}{Champion\+Skins\+Parameters}}}]{champion\+Skins\+Parameters }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ var\ champion\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_abe77ffb1bd1808de50cebf9b0c899f28}{\_championSkinsClient}}.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_ae61c4783bd8ceef5304c8ee961a5a225}{GetChampionSkins}}(championSkinsParameters.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_champion_skins_parameters_a1f64a1d82a32c12789fb3e40d2856856}{Name}});}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ champion;}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 4
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_afcbf4608c71deecd697ab78fdef9d121}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_afcbf4608c71deecd697ab78fdef9d121} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!GetDataFromDB@{GetDataFromDB}}
+\index{GetDataFromDB@{GetDataFromDB}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{GetDataFromDB()}{GetDataFromDB()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Lo\+LAPI.\+Controllers.\+Lo\+LController.\+Get\+Data\+From\+DB (\begin{DoxyParamCaption}\item[{string}]{request\+ID,  }\item[{string}]{user\+ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00061}{61}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}\ dbRepository\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ RequestID\ =\ requestID,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ UserID\ =\ userID}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}{\_dynamoDbClient}}.\mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_ab9cf068cbe34dc81006bbe4c7465045b}{GetDataFromDB}}(dbRepository);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok(dbRepository);}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 5
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a121538405273cb77ad2c2b1ef4d1e7bf}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a121538405273cb77ad2c2b1ef4d1e7bf} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!GetPlayerDetails@{GetPlayerDetails}}
+\index{GetPlayerDetails@{GetPlayerDetails}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{GetPlayerDetails()}{GetPlayerDetails()}}
+{\footnotesize\ttfamily async Task$<$ List$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_player_details}{Player\+Details}} $>$ $>$ Lo\+LAPI.\+Controllers.\+Lo\+LController.\+Get\+Player\+Details (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Query\mbox{]} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_player_parameters}{Player\+Parameters}}}]{parameters }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ var\ player\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a88a06a25dd8b6374dbf66530dfad9906}{\_playerDetails}}.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a445519b6a2521ac2c7ab46082f4a7de4}{GetPlayerDetails}}(parameters.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_player_parameters_a9a0189e9f7316cdceabcacad8ebf387e}{Username}},\ parameters.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_player_parameters_a90a60cb262de66ec72c89b1879d83525}{Region}});}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ player;}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 6
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a1400e3d80fc246549aa77fc6616a6f8d}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a1400e3d80fc246549aa77fc6616a6f8d} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!GetSchedule@{GetSchedule}}
+\index{GetSchedule@{GetSchedule}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{GetSchedule()}{GetSchedule()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_esports_schedule}{Esports\+Schedule}} $>$ Lo\+LAPI.\+Controllers.\+Lo\+LController.\+Get\+Schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ var\ schedule\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a89d445a192e896adb5109c487ab9fa1e}{\_scheduleClient}}.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a9e48f9371189442e2a4f12893608c171}{GetSchedule}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ schedule;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 7
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a04ddce945b6f7019e2e7f9c520dad7cb}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a04ddce945b6f7019e2e7f9c520dad7cb} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!GetYouTubeVideo@{GetYouTubeVideo}}
+\index{GetYouTubeVideo@{GetYouTubeVideo}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{GetYouTubeVideo()}{GetYouTubeVideo()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_you_tube_repository}{You\+Tube\+Repository}} $>$ Lo\+LAPI.\+Controllers.\+Lo\+LController.\+Get\+You\+Tube\+Video (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Query\mbox{]} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_you_tube_parameters}{You\+Tube\+Parameters}}}]{parameters }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00086}{86}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ var\ search\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ab49ec546c697e0d5e8743f1401c99b3b}{\_youTubeClient}}.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_you_tube_client_a869d14fc53c59b00333683eba5a51a68}{GetYouTubeVideo}}(parameters.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_you_tube_parameters_a12dc7cc5d80cb28e34f168f0a672d1f9}{Keyword}});}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ search;}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 8
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_aa580e53409bae6410964afcbbc6bb7ad}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_aa580e53409bae6410964afcbbc6bb7ad} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!OpenAi@{OpenAi}}
+\index{OpenAi@{OpenAi}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{OpenAi()}{OpenAi()}}
+{\footnotesize\ttfamily async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_open_ai_response}{Open\+Ai\+Response}} $>$ $>$ Lo\+LAPI.\+Controllers.\+Lo\+LController.\+Open\+Ai (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Body\mbox{]} \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_open_ai_repository}{Open\+Ai\+Repository}}}]{open\+Ai\+Repository }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00093}{93}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ var\ \mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client}{OpenAIClient}}();}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ var\ result\ =\ await\ \mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}}.OpenAI(openAiRepository.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_open_ai_repository_ace65704ebf43c5f796e9100805fbee1b}{messages}}.FirstOrDefault()?.content);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ var\ openAiResponse\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_open_ai_response}{OpenAiResponse}}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a7530c067158f737744fbbf00d037bf96}{ParseContentFromSwaggerResponse}}(result)}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok(openAiResponse);}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 9
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a7530c067158f737744fbbf00d037bf96}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a7530c067158f737744fbbf00d037bf96} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!ParseContentFromSwaggerResponse@{ParseContentFromSwaggerResponse}}
+\index{ParseContentFromSwaggerResponse@{ParseContentFromSwaggerResponse}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{ParseContentFromSwaggerResponse()}{ParseContentFromSwaggerResponse()}}
+{\footnotesize\ttfamily string Lo\+LAPI.\+Controllers.\+Lo\+LController.\+Parse\+Content\+From\+Swagger\+Response (\begin{DoxyParamCaption}\item[{string}]{swagger\+Response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00104}{104}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ var\ parsedResponse\ =\ JObject.Parse(swaggerResponse);}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ var\ content\ =\ parsedResponse[\textcolor{stringliteral}{"{}choices"{}}]?.FirstOrDefault()?[\textcolor{stringliteral}{"{}message"{}}]?[\textcolor{stringliteral}{"{}content"{}}]?.ToString();}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ content;}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_abe77ffb1bd1808de50cebf9b0c899f28}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_abe77ffb1bd1808de50cebf9b0c899f28} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!\_championSkinsClient@{\_championSkinsClient}}
+\index{\_championSkinsClient@{\_championSkinsClient}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{\_championSkinsClient}{\_championSkinsClient}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}{Champion\+Skins\+Client}} Lo\+LAPI.\+Controllers.\+Lo\+LController.\+\_\+champion\+Skins\+Client\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!\_dynamoDbClient@{\_dynamoDbClient}}
+\index{\_dynamoDbClient@{\_dynamoDbClient}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{\_dynamoDbClient}{\_dynamoDbClient}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client}{IDynamo\+Db\+Client}} Lo\+LAPI.\+Controllers.\+Lo\+LController.\+\_\+dynamo\+Db\+Client\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ae33911536db8d85530ec9479d5b87178}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ae33911536db8d85530ec9479d5b87178} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!\_logger@{\_logger}}
+\index{\_logger@{\_logger}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{\_logger}{\_logger}}
+{\footnotesize\ttfamily readonly ILogger$<$\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller}{Lo\+LController}}$>$ Lo\+LAPI.\+Controllers.\+Lo\+LController.\+\_\+logger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a88a06a25dd8b6374dbf66530dfad9906}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a88a06a25dd8b6374dbf66530dfad9906} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!\_playerDetails@{\_playerDetails}}
+\index{\_playerDetails@{\_playerDetails}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{\_playerDetails}{\_playerDetails}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client}{Player\+Details\+Client}} Lo\+LAPI.\+Controllers.\+Lo\+LController.\+\_\+player\+Details\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a89d445a192e896adb5109c487ab9fa1e}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a89d445a192e896adb5109c487ab9fa1e} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!\_scheduleClient@{\_scheduleClient}}
+\index{\_scheduleClient@{\_scheduleClient}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{\_scheduleClient}{\_scheduleClient}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client}{Schedule\+Client}} Lo\+LAPI.\+Controllers.\+Lo\+LController.\+\_\+schedule\+Client\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+\Hypertarget{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ab49ec546c697e0d5e8743f1401c99b3b}\label{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ab49ec546c697e0d5e8743f1401c99b3b} 
+\index{LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}!\_youTubeClient@{\_youTubeClient}}
+\index{\_youTubeClient@{\_youTubeClient}!LoLAPI.Controllers.LoLController@{LoLAPI.Controllers.LoLController}}
+\doxysubsubsection{\texorpdfstring{\_youTubeClient}{\_youTubeClient}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_you_tube_client}{You\+Tube\+Client}} Lo\+LAPI.\+Controllers.\+Lo\+LController.\+\_\+you\+Tube\+Client\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_lo_l_controller_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_lo_l_controller_8cs_source}{Lo\+LController.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controllers/\mbox{\hyperlink{_lo_l_controller_8cs}{Lo\+LController.\+cs}}\end{DoxyCompactItemize}

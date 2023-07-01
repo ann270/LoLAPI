@@ -1,0 +1,78 @@
+\doxysection{Lo\+LAPI.\+Clients.\+Open\+AIClient Class Reference}
+\hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client}{}\label{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client}\index{LoLAPI.Clients.OpenAIClient@{LoLAPI.Clients.OpenAIClient}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client_ad3d56efb129b0cc48b490de329b40ff7}{Open\+AI}} (string user\+Message)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_open_a_i_client_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_open_a_i_client_8cs_source}{Open\+AIClient.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client_ad3d56efb129b0cc48b490de329b40ff7}\label{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client_ad3d56efb129b0cc48b490de329b40ff7} 
+\index{LoLAPI.Clients.OpenAIClient@{LoLAPI.Clients.OpenAIClient}!OpenAI@{OpenAI}}
+\index{OpenAI@{OpenAI}!LoLAPI.Clients.OpenAIClient@{LoLAPI.Clients.OpenAIClient}}
+\doxysubsubsection{\texorpdfstring{OpenAI()}{OpenAI()}}
+{\footnotesize\ttfamily async Task$<$ string $>$ Lo\+LAPI.\+Clients.\+Open\+AIClient.\+Open\+AI (\begin{DoxyParamCaption}\item[{string}]{user\+Message }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_open_a_i_client_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_open_a_i_client_8cs_source}{Open\+AIClient.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ var\ \mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}}\ =\ \textcolor{keyword}{new}\ HttpClient();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ var\ apiUrl\ =\ \textcolor{stringliteral}{"{}https://chatgpt-\/best-\/price.p.rapidapi.com/v1/chat/completions"{}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ var\ rapidApiKey\ =\ \textcolor{stringliteral}{"{}69d7dc43d6msh39a8df6283d60e1p11c354jsn4ef5d9f548cd"{}};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ var\ rapidApiHost\ =\ \textcolor{stringliteral}{"{}chatgpt-\/best-\/price.p.rapidapi.com"{}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ var\ model\ =\ \textcolor{stringliteral}{"{}gpt-\/3.5-\/turbo"{}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ var\ role\ =\ \textcolor{stringliteral}{"{}user"{}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ var\ content\ =\ \$\textcolor{stringliteral}{"{}Write\ several\ champions\ who\ counter\ \{userMessage\}\ in\ the\ game\ League\ of\ Legends"{}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ var\ requestData\ =\ \textcolor{keyword}{new}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ model,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ messages\ =\ \textcolor{keyword}{new}[]}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ role,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ content}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ var\ requestContent\ =\ \textcolor{keyword}{new}\ StringContent(JsonConvert.SerializeObject(requestData),\ Encoding.UTF8,\ \textcolor{stringliteral}{"{}application/json"{}});}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ HttpRequestMessage}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ Method\ =\ HttpMethod.Post,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ RequestUri\ =\ \textcolor{keyword}{new}\ Uri(apiUrl),}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ Headers\ =}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}X-\/RapidAPI-\/Key"{}},\ rapidApiKey\ \},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}X-\/RapidAPI-\/Host"{}},\ rapidApiHost\ \},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ requestContent}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ request.Content\ =\ requestContent;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ request.Content.Headers.ContentType\ =\ \textcolor{keyword}{new}\ MediaTypeHeaderValue(\textcolor{stringliteral}{"{}application/json"{}});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (var\ response\ =\ await\ \mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}}.SendAsync(request))}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ response.EnsureSuccessStatusCode();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ var\ body\ =\ await\ response.Content.ReadAsStringAsync();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ body;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Clients/\mbox{\hyperlink{_open_a_i_client_8cs}{Open\+AIClient.\+cs}}\end{DoxyCompactItemize}

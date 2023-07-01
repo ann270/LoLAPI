@@ -1,0 +1,34 @@
+\doxysection{Champion\+Skins\+Client.\+cs}
+\hypertarget{_champion_skins_client_8cs_source}{}\label{_champion_skins_client_8cs_source}\index{Clients/ChampionSkinsClient.cs@{Clients/ChampionSkinsClient.cs}}
+\mbox{\hyperlink{_champion_skins_client_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_lo_l_a_p_i_1_1_models}{LoLAPI.Models}};}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Newtonsoft.Json;}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00004}\mbox{\hyperlink{namespace_lo_l_a_p_i}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_lo_l_a_p_i_1_1_clients}{LoLAPI.Clients}};}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00006}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}{00006}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}{ChampionSkinsClient}}}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00008}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}{00008}}\ \ \ \ \ \textcolor{keyword}{private}\ HttpClient\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}{\_client}};}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00009}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a7d529a93366c83dba82523d286f75c29}{00009}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a7d529a93366c83dba82523d286f75c29}{\_address}};}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00010}00010\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00011}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a09cfd44662c577de5e8ff2d9d867e9e7}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a09cfd44662c577de5e8ff2d9d867e9e7}{ChampionSkinsClient}}()}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a7d529a93366c83dba82523d286f75c29}{\_address}}\ =\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_constants}{Constants}}.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_constants_acba95f0d7cea5402124a8e19586b2b8e}{ChampionSkinsAddress}};}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}{\_client}}\ =\ \textcolor{keyword}{new}\ HttpClient();}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \_client.BaseAddress\ =\ \textcolor{keyword}{new}\ Uri(\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_a7d529a93366c83dba82523d286f75c29}{\_address}});}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}{\_client}}.DefaultRequestHeaders.Add(\textcolor{stringliteral}{"{}X-\/RapidAPI-\/Key"{}},\ \textcolor{stringliteral}{"{}69d7dc43d6msh39a8df6283d60e1p11c354jsn4ef5d9f548cd"{}});}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}{\_client}}.DefaultRequestHeaders.Add(\textcolor{stringliteral}{"{}X-\/RapidAPI-\/Host"{}},\ \textcolor{stringliteral}{"{}league-\/of-\/legends-\/champions.p.rapidapi.com"{}});}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00019}00019\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00020}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_ae61c4783bd8ceef5304c8ee961a5a225}{00020}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ChampionSkins>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_ae61c4783bd8ceef5304c8ee961a5a225}{GetChampionSkins}}(\textcolor{keywordtype}{string}\ name)}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00021}00021\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_af8637600c4be33f6d3cb1dd7563c54aa}{\_client}}.GetAsync(\$\textcolor{stringliteral}{"{}champions/en-\/us/\{name\}"{}});}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ response.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ var\ content\ =\ response.Content.ReadAsStringAsync().Result;}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ var\ result\ =\ JsonConvert.DeserializeObject<\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_champion_skins}{ChampionSkins}}>(content);}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_champion_skins_client_8cs_source_l00028}00028\ \}}
+
+\end{DoxyCode}

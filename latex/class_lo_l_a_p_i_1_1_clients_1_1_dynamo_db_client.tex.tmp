@@ -1,0 +1,98 @@
+\doxysection{Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client Class Reference}
+\hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client}{}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client}\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+
+
+Inheritance diagram for Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client\+:
+% FIG 0
+
+
+Collaboration diagram for Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_aed8d12d12fcacad4ac45fc7eec770890}{Dynamo\+Db\+Client}} (IAmazon\+Dynamo\+DB dynamo\+Db)
+\item 
+async Task \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a5142d00b21f492b6811627d66754878f}{Post\+Data\+To\+Bd}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\item 
+async Task \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a9502454f2c95b5c4a0f7b72b81779a47}{Get\+Data\+From\+DB}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\item 
+async Task \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a50ada5dfaa342f46d7650ba0f2ec056a}{Delete\+Data\+From\+DB}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\item 
+void \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ae2ae9526a381c455954f7445fab1fff1}{Dispose}} ()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+Task \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_a14a230379f1c40725ea157f5a9a12108}{Post\+Data\+To\+Bd}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\item 
+Task \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_ab9cf068cbe34dc81006bbe4c7465045b}{Get\+Data\+From\+DB}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\item 
+Task \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_aaa8548f5df3d2f6e72bd19b2ad28b6f8}{Delete\+Data\+From\+DB}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_afd5485acfa4ec4a0734de10479cdcbe6}{\+\_\+table\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_aed8d12d12fcacad4ac45fc7eec770890}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_aed8d12d12fcacad4ac45fc7eec770890} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!DynamoDbClient@{DynamoDbClient}}
+\index{DynamoDbClient@{DynamoDbClient}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{DynamoDbClient()}{DynamoDbClient()}}
+{\footnotesize\ttfamily Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+Dynamo\+Db\+Client (\begin{DoxyParamCaption}\item[{IAmazon\+Dynamo\+DB}]{dynamo\+Db }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a50ada5dfaa342f46d7650ba0f2ec056a}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a50ada5dfaa342f46d7650ba0f2ec056a} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!DeleteDataFromDB@{DeleteDataFromDB}}
+\index{DeleteDataFromDB@{DeleteDataFromDB}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{DeleteDataFromDB()}{DeleteDataFromDB()}}
+{\footnotesize\ttfamily async Task Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+Delete\+Data\+From\+DB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}]{db\+Repository }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_aaa8548f5df3d2f6e72bd19b2ad28b6f8}{Lo\+LAPI.\+Clients.\+IDynamo\+Db\+Client}}.
+
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ae2ae9526a381c455954f7445fab1fff1}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ae2ae9526a381c455954f7445fab1fff1} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a9502454f2c95b5c4a0f7b72b81779a47}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a9502454f2c95b5c4a0f7b72b81779a47} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!GetDataFromDB@{GetDataFromDB}}
+\index{GetDataFromDB@{GetDataFromDB}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{GetDataFromDB()}{GetDataFromDB()}}
+{\footnotesize\ttfamily async Task Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+Get\+Data\+From\+DB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}]{db\+Repository }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_ab9cf068cbe34dc81006bbe4c7465045b}{Lo\+LAPI.\+Clients.\+IDynamo\+Db\+Client}}.
+
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a5142d00b21f492b6811627d66754878f}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a5142d00b21f492b6811627d66754878f} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!PostDataToBd@{PostDataToBd}}
+\index{PostDataToBd@{PostDataToBd}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{PostDataToBd()}{PostDataToBd()}}
+{\footnotesize\ttfamily async Task Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+Post\+Data\+To\+Bd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}]{db\+Repository }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_a14a230379f1c40725ea157f5a9a12108}{Lo\+LAPI.\+Clients.\+IDynamo\+Db\+Client}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_afd5485acfa4ec4a0734de10479cdcbe6}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_afd5485acfa4ec4a0734de10479cdcbe6} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!\_tableName@{\_tableName}}
+\index{\_tableName@{\_tableName}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{\_tableName}{\_tableName}}
+{\footnotesize\ttfamily string Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+\_\+table\+Name}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Clients/\mbox{\hyperlink{_dynamo_db_client_8cs}{Dynamo\+Db\+Client.\+cs}}\end{DoxyCompactItemize}

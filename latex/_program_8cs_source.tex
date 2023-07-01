@@ -1,0 +1,54 @@
+\doxysection{Program.\+cs}
+\hypertarget{_program_8cs_source}{}\label{_program_8cs_source}\mbox{\hyperlink{_program_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Amazon;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Amazon.DynamoDBv2;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Amazon.DynamoDBv2.DataModel;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Amazon.Internal;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Amazon.Runtime;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_lo_l_a_p_i}{LoLAPI}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_lo_l_a_p_i_1_1_clients}{LoLAPI.Clients}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00009}\mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{00009}}\ var\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}\ =\ WebApplication.CreateBuilder(args);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00011}00011\ \textcolor{comment}{//\ Add\ services\ to\ the\ container.}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00013}\mbox{\hyperlink{_program_8cs_abc3694a0e15618f2499e5a540264f833}{00013}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddControllers();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00014}00014\ \textcolor{comment}{//\ Learn\ more\ about\ configuring\ Swagger/OpenAPI\ at\ https://aka.ms/aspnetcore/swashbuckle}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00015}\mbox{\hyperlink{_program_8cs_a0d7859f9cad50e8e9fdf015100780e07}{00015}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddEndpointsApiExplorer();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00016}\mbox{\hyperlink{_program_8cs_ae0ce43c019a5621d731d0c622c793644}{00016}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddSwaggerGen();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00017}\mbox{\hyperlink{_program_8cs_a0651b1cc6b2ec2a500b3fbaaaba6ac6c}{00017}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddHttpContextAccessor();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00018}\mbox{\hyperlink{_program_8cs_a0156c8561febd5f74b62969bf38cadde}{00018}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddSingleton<\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client}{PlayerDetailsClient}}>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00019}\mbox{\hyperlink{_program_8cs_a087441760ebe0c5a04dfbc0bdff84a4d}{00019}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddSingleton<\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client}{ScheduleClient}}>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00020}\mbox{\hyperlink{_program_8cs_afe64afbe7f426a9e4d2cd46f0b4e2af6}{00020}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddSingleton<\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_you_tube_client}{YouTubeClient}}>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00021}\mbox{\hyperlink{_program_8cs_a97ece812b1cf4aa546e0f362d817841b}{00021}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddSingleton<\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client}{OpenAIClient}}>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00022}\mbox{\hyperlink{_program_8cs_a55c2cbfeca3a92fdec59efe0342f0c6f}{00022}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddSingleton<\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}{ChampionSkinsClient}}>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00024}\mbox{\hyperlink{_program_8cs_a2c077bf27a3193ddb72b97f4666ae219}{00024}}\ var\ \mbox{\hyperlink{_program_8cs_a2c077bf27a3193ddb72b97f4666ae219}{credentials}}\ =\ \textcolor{keyword}{new}\ BasicAWSCredentials(\mbox{\hyperlink{class_lo_l_a_p_i_1_1_constants}{Constants}}.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_constants_ad02fac5effa427d5c927561bce6cce6e}{AccessKey}},\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_constants}{Constants}}.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_constants_a788f55912f36f60bf51be450309220fc}{SecretKey}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00025}\mbox{\hyperlink{_program_8cs_aeac120c9ce32d189166215752b0b1a76}{00025}}\ var\ \mbox{\hyperlink{_program_8cs_aeac120c9ce32d189166215752b0b1a76}{config}}\ =\ \textcolor{keyword}{new}\ AmazonDynamoDBConfig()}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00027}00027\ \ \ \ \ RegionEndpoint\ =\ RegionEndpoint.EUNorth1}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00028}00028\ \};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00029}\mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{00029}}\ var\ \mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}}\ =\ \textcolor{keyword}{new}\ AmazonDynamoDBClient(\mbox{\hyperlink{_program_8cs_a2c077bf27a3193ddb72b97f4666ae219}{credentials}},\ \mbox{\hyperlink{_program_8cs_aeac120c9ce32d189166215752b0b1a76}{config}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00030}\mbox{\hyperlink{_program_8cs_abc7eccf69f0a9bb0f9f68958fa35f2cd}{00030}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddSingleton<IAmazonDynamoDB>(\mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00031}\mbox{\hyperlink{_program_8cs_acdad66fe5c4df5e75169ef0294a98ccc}{00031}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddSingleton<IDynamoDBContext,\ DynamoDBContext>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00032}\mbox{\hyperlink{_program_8cs_a0ba058c0eb1a337a94c74483c285805e}{00032}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddSingleton<\mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client}{IDynamoDbClient}},\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client}{DynamoDbClient}}>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00034}\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{00034}}\ var\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Build();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00036}00036\ \textcolor{comment}{//\ Configure\ the\ HTTP\ request\ pipeline.}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00037}\mbox{\hyperlink{_program_8cs_a79a944c7f0e25196ca3c5a8638b919b9}{00037}}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Environment.IsDevelopment())}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00038}00038\ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseSwagger();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseSwaggerUI();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00043}\mbox{\hyperlink{_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9}{00043}}\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseHttpsRedirection();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00045}\mbox{\hyperlink{_program_8cs_af6f72d752b2e73aa0292f74bd13237ab}{00045}}\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseAuthorization();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00047}\mbox{\hyperlink{_program_8cs_a9e2ee3170aa6279b68eefd1651f7d96c}{00047}}\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.MapControllers();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00049}\mbox{\hyperlink{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd}{00049}}\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Run();}
+
+\end{DoxyCode}

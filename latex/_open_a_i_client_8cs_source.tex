@@ -1,0 +1,62 @@
+\doxysection{Open\+AIClient.\+cs}
+\hypertarget{_open_a_i_client_8cs_source}{}\label{_open_a_i_client_8cs_source}\index{Clients/OpenAIClient.cs@{Clients/OpenAIClient.cs}}
+\mbox{\hyperlink{_open_a_i_client_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_lo_l_a_p_i_1_1_models}{LoLAPI.Models}};}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Newtonsoft.Json;}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Net.Http.Headers;}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_lo_l_a_p_i_1_1_clients}{LoLAPI.Clients}};}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00008}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client}{OpenAIClient}}}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00010}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client_ad3d56efb129b0cc48b490de329b40ff7}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<string>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client_ad3d56efb129b0cc48b490de329b40ff7}{OpenAI}}(\textcolor{keywordtype}{string}\ userMessage)}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ var\ \mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}}\ =\ \textcolor{keyword}{new}\ HttpClient();}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ var\ apiUrl\ =\ \textcolor{stringliteral}{"{}https://chatgpt-\/best-\/price.p.rapidapi.com/v1/chat/completions"{}};}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ var\ rapidApiKey\ =\ \textcolor{stringliteral}{"{}69d7dc43d6msh39a8df6283d60e1p11c354jsn4ef5d9f548cd"{}};}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ var\ rapidApiHost\ =\ \textcolor{stringliteral}{"{}chatgpt-\/best-\/price.p.rapidapi.com"{}};}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ var\ model\ =\ \textcolor{stringliteral}{"{}gpt-\/3.5-\/turbo"{}};}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ var\ role\ =\ \textcolor{stringliteral}{"{}user"{}};}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ var\ content\ =\ \$\textcolor{stringliteral}{"{}Write\ several\ champions\ who\ counter\ \{userMessage\}\ in\ the\ game\ League\ of\ Legends"{}};}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ var\ requestData\ =\ \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ model,}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ messages\ =\ \textcolor{keyword}{new}[]}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ role,}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ content}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ var\ requestContent\ =\ \textcolor{keyword}{new}\ StringContent(JsonConvert.SerializeObject(requestData),\ Encoding.UTF8,\ \textcolor{stringliteral}{"{}application/json"{}});}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ HttpRequestMessage}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Method\ =\ HttpMethod.Post,}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ RequestUri\ =\ \textcolor{keyword}{new}\ Uri(apiUrl),}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ Headers\ =}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}X-\/RapidAPI-\/Key"{}},\ rapidApiKey\ \},}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}X-\/RapidAPI-\/Host"{}},\ rapidApiHost\ \},}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ requestContent}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ request.Content\ =\ requestContent;}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ request.Content.Headers.ContentType\ =\ \textcolor{keyword}{new}\ MediaTypeHeaderValue(\textcolor{stringliteral}{"{}application/json"{}});}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (var\ response\ =\ await\ \mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}}.SendAsync(request))}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ response.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ var\ body\ =\ await\ response.Content.ReadAsStringAsync();}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ body;}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_open_a_i_client_8cs_source_l00056}00056\ }
+
+\end{DoxyCode}

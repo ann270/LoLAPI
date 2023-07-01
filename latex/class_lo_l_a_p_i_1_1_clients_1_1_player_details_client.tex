@@ -1,0 +1,107 @@
+\doxysection{Lo\+LAPI.\+Clients.\+Player\+Details\+Client Class Reference}
+\hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client}{}\label{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client}\index{LoLAPI.Clients.PlayerDetailsClient@{LoLAPI.Clients.PlayerDetailsClient}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a15ee4a4f8f364793040e0dfe062f4e00}{Player\+Details\+Client}} ()
+\item 
+async Task$<$ List$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_player_details}{Player\+Details}} $>$ $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a445519b6a2521ac2c7ab46082f4a7de4}{Get\+Player\+Details}} (string username, string region)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Http\+Client \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a92f8452e185a12608f37eb04718f2273}{\+\_\+client}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a3ce172d3b8e415566f3e9edd47eeecc7}{\+\_\+address}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_player_details_client_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_player_details_client_8cs_source}{Player\+Details\+Client.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a15ee4a4f8f364793040e0dfe062f4e00}\label{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a15ee4a4f8f364793040e0dfe062f4e00} 
+\index{LoLAPI.Clients.PlayerDetailsClient@{LoLAPI.Clients.PlayerDetailsClient}!PlayerDetailsClient@{PlayerDetailsClient}}
+\index{PlayerDetailsClient@{PlayerDetailsClient}!LoLAPI.Clients.PlayerDetailsClient@{LoLAPI.Clients.PlayerDetailsClient}}
+\doxysubsubsection{\texorpdfstring{PlayerDetailsClient()}{PlayerDetailsClient()}}
+{\footnotesize\ttfamily Lo\+LAPI.\+Clients.\+Player\+Details\+Client.\+Player\+Details\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_player_details_client_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_player_details_client_8cs_source}{Player\+Details\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a3ce172d3b8e415566f3e9edd47eeecc7}{\_address}}\ =\ Constants.AccountsAddress;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a92f8452e185a12608f37eb04718f2273}{\_client}}\ =\ \textcolor{keyword}{new}\ HttpClient();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \_client.BaseAddress\ =\ \textcolor{keyword}{new}\ Uri(\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a3ce172d3b8e415566f3e9edd47eeecc7}{\_address}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a92f8452e185a12608f37eb04718f2273}{\_client}}.DefaultRequestHeaders.Add(\textcolor{stringliteral}{"{}X-\/RapidAPI-\/Key"{}},\ \textcolor{stringliteral}{"{}bb38d1d1b8msh69e107efafa46b9p1c2754jsne5eaa2106a35"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a92f8452e185a12608f37eb04718f2273}{\_client}}.DefaultRequestHeaders.Add(\textcolor{stringliteral}{"{}X-\/RapidAPI-\/Host"{}},\ \textcolor{stringliteral}{"{}league-\/of-\/legends-\/galore.p.rapidapi.com"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a445519b6a2521ac2c7ab46082f4a7de4}\label{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a445519b6a2521ac2c7ab46082f4a7de4} 
+\index{LoLAPI.Clients.PlayerDetailsClient@{LoLAPI.Clients.PlayerDetailsClient}!GetPlayerDetails@{GetPlayerDetails}}
+\index{GetPlayerDetails@{GetPlayerDetails}!LoLAPI.Clients.PlayerDetailsClient@{LoLAPI.Clients.PlayerDetailsClient}}
+\doxysubsubsection{\texorpdfstring{GetPlayerDetails()}{GetPlayerDetails()}}
+{\footnotesize\ttfamily async Task$<$ List$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_player_details}{Player\+Details}} $>$ $>$ Lo\+LAPI.\+Clients.\+Player\+Details\+Client.\+Get\+Player\+Details (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{string}]{region }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_player_details_client_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_player_details_client_8cs_source}{Player\+Details\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a92f8452e185a12608f37eb04718f2273}{\_client}}.GetAsync(\$\textcolor{stringliteral}{"{}/api/getPlayerRank?name=\{username\}\&region=\{region\}"{}});}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ response.EnsureSuccessStatusCode();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ var\ content\ =\ response.Content.ReadAsStringAsync().Result;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ var\ result\ =\ JsonConvert.DeserializeObject<List<PlayerDetails>>(content);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a3ce172d3b8e415566f3e9edd47eeecc7}\label{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a3ce172d3b8e415566f3e9edd47eeecc7} 
+\index{LoLAPI.Clients.PlayerDetailsClient@{LoLAPI.Clients.PlayerDetailsClient}!\_address@{\_address}}
+\index{\_address@{\_address}!LoLAPI.Clients.PlayerDetailsClient@{LoLAPI.Clients.PlayerDetailsClient}}
+\doxysubsubsection{\texorpdfstring{\_address}{\_address}}
+{\footnotesize\ttfamily string Lo\+LAPI.\+Clients.\+Player\+Details\+Client.\+\_\+address\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_player_details_client_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_player_details_client_8cs_source}{Player\+Details\+Client.\+cs}}.
+
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a92f8452e185a12608f37eb04718f2273}\label{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a92f8452e185a12608f37eb04718f2273} 
+\index{LoLAPI.Clients.PlayerDetailsClient@{LoLAPI.Clients.PlayerDetailsClient}!\_client@{\_client}}
+\index{\_client@{\_client}!LoLAPI.Clients.PlayerDetailsClient@{LoLAPI.Clients.PlayerDetailsClient}}
+\doxysubsubsection{\texorpdfstring{\_client}{\_client}}
+{\footnotesize\ttfamily Http\+Client Lo\+LAPI.\+Clients.\+Player\+Details\+Client.\+\_\+client\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_player_details_client_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_player_details_client_8cs_source}{Player\+Details\+Client.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Clients/\mbox{\hyperlink{_player_details_client_8cs}{Player\+Details\+Client.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,121 @@
+\doxysection{Lo\+LAPI.\+Clients.\+Schedule\+Client Class Reference}
+\hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client}{}\label{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client}\index{LoLAPI.Clients.ScheduleClient@{LoLAPI.Clients.ScheduleClient}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_abb6f75f7812fe23be0df14dc4c4099fe}{Schedule\+Client}} ()
+\item 
+async Task$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_esports_schedule}{Esports\+Schedule}} $>$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a9e48f9371189442e2a4f12893608c171}{Get\+Schedule}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Http\+Client \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a2167a1632106a823762a5e026ac7daaa}{\+\_\+client}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a6d9edc4064a4b10b4e75353167ab776c}{\+\_\+address}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_schedule_client_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_schedule_client_8cs_source}{Schedule\+Client.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_abb6f75f7812fe23be0df14dc4c4099fe}\label{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_abb6f75f7812fe23be0df14dc4c4099fe} 
+\index{LoLAPI.Clients.ScheduleClient@{LoLAPI.Clients.ScheduleClient}!ScheduleClient@{ScheduleClient}}
+\index{ScheduleClient@{ScheduleClient}!LoLAPI.Clients.ScheduleClient@{LoLAPI.Clients.ScheduleClient}}
+\doxysubsubsection{\texorpdfstring{ScheduleClient()}{ScheduleClient()}}
+{\footnotesize\ttfamily Lo\+LAPI.\+Clients.\+Schedule\+Client.\+Schedule\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_schedule_client_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_schedule_client_8cs_source}{Schedule\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a6d9edc4064a4b10b4e75353167ab776c}{\_address}}\ =\ Constants.EsportsAddress;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a2167a1632106a823762a5e026ac7daaa}{\_client}}\ =\ \textcolor{keyword}{new}\ HttpClient();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \_client.BaseAddress\ =\ \textcolor{keyword}{new}\ Uri(\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a6d9edc4064a4b10b4e75353167ab776c}{\_address}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a2167a1632106a823762a5e026ac7daaa}{\_client}}.DefaultRequestHeaders.Add(\textcolor{stringliteral}{"{}X-\/RapidAPI-\/Key"{}},\ \textcolor{stringliteral}{"{}bb38d1d1b8msh69e107efafa46b9p1c2754jsne5eaa2106a35"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a2167a1632106a823762a5e026ac7daaa}{\_client}}.DefaultRequestHeaders.Add(\textcolor{stringliteral}{"{}X-\/RapidAPI-\/Host"{}},\ \textcolor{stringliteral}{"{}league-\/of-\/legends-\/esports.p.rapidapi.com"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a9e48f9371189442e2a4f12893608c171}\label{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a9e48f9371189442e2a4f12893608c171} 
+\index{LoLAPI.Clients.ScheduleClient@{LoLAPI.Clients.ScheduleClient}!GetSchedule@{GetSchedule}}
+\index{GetSchedule@{GetSchedule}!LoLAPI.Clients.ScheduleClient@{LoLAPI.Clients.ScheduleClient}}
+\doxysubsubsection{\texorpdfstring{GetSchedule()}{GetSchedule()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_esports_schedule}{Esports\+Schedule}} $>$ Lo\+LAPI.\+Clients.\+Schedule\+Client.\+Get\+Schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_schedule_client_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_schedule_client_8cs_source}{Schedule\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a2167a1632106a823762a5e026ac7daaa}{\_client}}.GetAsync(\textcolor{stringliteral}{"{}/schedule?leagueId=98767991299243165\%252C99332500638116286\%252C98767991302996019"{}});}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ response.EnsureSuccessStatusCode();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ var\ content\ =\ response.Content.ReadAsStringAsync().Result;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ var\ result\ =\ JsonConvert.DeserializeObject<\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_esports_schedule}{EsportsSchedule}}>(content);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ var\ currentDateTime\ =\ DateTime.UtcNow;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ var\ filteredEvents\ =\ result.Data.Schedule.Events}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ .Where(e\ =>\ DateTime.Parse(e.StartTime)\ >\ currentDateTime)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ .ToList();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ filteredEvents.Sort((e1,\ e2)\ =>\ DateTime.Parse(e1.StartTime).CompareTo(DateTime.Parse(e2.StartTime)));}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ var\ next5Events\ =\ filteredEvents.Take(5).ToList();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ var\ filteredSchedule\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_esports_schedule}{EsportsSchedule}}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_data}{Data}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_data}{Data}}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_schedule}{Schedule}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_schedule}{Schedule}}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_events}{Events}}\ =\ next5Events}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ filteredSchedule;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a6d9edc4064a4b10b4e75353167ab776c}\label{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a6d9edc4064a4b10b4e75353167ab776c} 
+\index{LoLAPI.Clients.ScheduleClient@{LoLAPI.Clients.ScheduleClient}!\_address@{\_address}}
+\index{\_address@{\_address}!LoLAPI.Clients.ScheduleClient@{LoLAPI.Clients.ScheduleClient}}
+\doxysubsubsection{\texorpdfstring{\_address}{\_address}}
+{\footnotesize\ttfamily string Lo\+LAPI.\+Clients.\+Schedule\+Client.\+\_\+address\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_schedule_client_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_schedule_client_8cs_source}{Schedule\+Client.\+cs}}.
+
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a2167a1632106a823762a5e026ac7daaa}\label{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a2167a1632106a823762a5e026ac7daaa} 
+\index{LoLAPI.Clients.ScheduleClient@{LoLAPI.Clients.ScheduleClient}!\_client@{\_client}}
+\index{\_client@{\_client}!LoLAPI.Clients.ScheduleClient@{LoLAPI.Clients.ScheduleClient}}
+\doxysubsubsection{\texorpdfstring{\_client}{\_client}}
+{\footnotesize\ttfamily Http\+Client Lo\+LAPI.\+Clients.\+Schedule\+Client.\+\_\+client\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_schedule_client_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_schedule_client_8cs_source}{Schedule\+Client.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Clients/\mbox{\hyperlink{_schedule_client_8cs}{Schedule\+Client.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,222 @@
+\doxysection{Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client Class Reference}
+\hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client}{}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client}\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+
+
+Inheritance diagram for Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client\+:
+% FIG 0
+
+
+Collaboration diagram for Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_aed8d12d12fcacad4ac45fc7eec770890}{Dynamo\+Db\+Client}} (IAmazon\+Dynamo\+DB dynamo\+Db)
+\item 
+async Task \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a5142d00b21f492b6811627d66754878f}{Post\+Data\+To\+Bd}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\item 
+async Task \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a9502454f2c95b5c4a0f7b72b81779a47}{Get\+Data\+From\+DB}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\item 
+async Task \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a50ada5dfaa342f46d7650ba0f2ec056a}{Delete\+Data\+From\+DB}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\item 
+void \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ae2ae9526a381c455954f7445fab1fff1}{Dispose}} ()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+Task \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_a14a230379f1c40725ea157f5a9a12108}{Post\+Data\+To\+Bd}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\item 
+Task \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_ab9cf068cbe34dc81006bbe4c7465045b}{Get\+Data\+From\+DB}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\item 
+Task \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_aaa8548f5df3d2f6e72bd19b2ad28b6f8}{Delete\+Data\+From\+DB}} (\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}} db\+Repository)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_afd5485acfa4ec4a0734de10479cdcbe6}{\+\_\+table\+Name}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly IAmazon\+Dynamo\+DB \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ac785746c7213fadb9ae23cdfc09b3765}{\+\_\+dynamo\+Db}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_dynamo_db_client_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_dynamo_db_client_8cs_source}{Dynamo\+Db\+Client.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_aed8d12d12fcacad4ac45fc7eec770890}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_aed8d12d12fcacad4ac45fc7eec770890} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!DynamoDbClient@{DynamoDbClient}}
+\index{DynamoDbClient@{DynamoDbClient}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{DynamoDbClient()}{DynamoDbClient()}}
+{\footnotesize\ttfamily Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+Dynamo\+Db\+Client (\begin{DoxyParamCaption}\item[{IAmazon\+Dynamo\+DB}]{dynamo\+Db }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_dynamo_db_client_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_dynamo_db_client_8cs_source}{Dynamo\+Db\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ac785746c7213fadb9ae23cdfc09b3765}{\_dynamoDb}}\ =\ dynamoDb;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_afd5485acfa4ec4a0734de10479cdcbe6}{\_tableName}}\ =\ Constants.TableName;}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a50ada5dfaa342f46d7650ba0f2ec056a}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a50ada5dfaa342f46d7650ba0f2ec056a} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!DeleteDataFromDB@{DeleteDataFromDB}}
+\index{DeleteDataFromDB@{DeleteDataFromDB}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{DeleteDataFromDB()}{DeleteDataFromDB()}}
+{\footnotesize\ttfamily async Task Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+Delete\+Data\+From\+DB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}]{db\+Repository }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_aaa8548f5df3d2f6e72bd19b2ad28b6f8}{Lo\+LAPI.\+Clients.\+IDynamo\+Db\+Client}}.
+
+
+
+Definition at line \mbox{\hyperlink{_dynamo_db_client_8cs_source_l00061}{61}} of file \mbox{\hyperlink{_dynamo_db_client_8cs_source}{Dynamo\+Db\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ DeleteItemRequest}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ TableName\ =\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_afd5485acfa4ec4a0734de10479cdcbe6}{\_tableName}},}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ Key\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ AttributeValue>}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}RequestID"{}},\ \textcolor{keyword}{new}\ AttributeValue\ \{\ S\ =\ dbRepository.RequestID\ \}\ \},}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}UserID"{}},\ \textcolor{keyword}{new}\ AttributeValue\ \{\ S\ =\ dbRepository.UserID\ \}\ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ac785746c7213fadb9ae23cdfc09b3765}{\_dynamoDb}}.DeleteItemAsync(request);}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ae2ae9526a381c455954f7445fab1fff1}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ae2ae9526a381c455954f7445fab1fff1} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_dynamo_db_client_8cs_source_l00075}{75}} of file \mbox{\hyperlink{_dynamo_db_client_8cs_source}{Dynamo\+Db\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ac785746c7213fadb9ae23cdfc09b3765}{\_dynamoDb}}.Dispose();}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a9502454f2c95b5c4a0f7b72b81779a47}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a9502454f2c95b5c4a0f7b72b81779a47} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!GetDataFromDB@{GetDataFromDB}}
+\index{GetDataFromDB@{GetDataFromDB}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{GetDataFromDB()}{GetDataFromDB()}}
+{\footnotesize\ttfamily async Task Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+Get\+Data\+From\+DB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}]{db\+Repository }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_ab9cf068cbe34dc81006bbe4c7465045b}{Lo\+LAPI.\+Clients.\+IDynamo\+Db\+Client}}.
+
+
+
+Definition at line \mbox{\hyperlink{_dynamo_db_client_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_dynamo_db_client_8cs_source}{Dynamo\+Db\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ GetItemRequest}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ TableName\ =\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_afd5485acfa4ec4a0734de10479cdcbe6}{\_tableName}},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ Key\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ AttributeValue>}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}RequestID"{}},\ \textcolor{keyword}{new}\ AttributeValue\ \{\ S\ =\ dbRepository.RequestID\ \}\ \},}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}UserID"{}},\ \textcolor{keyword}{new}\ AttributeValue\ \{\ S\ =\ dbRepository.UserID\ \}\ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ac785746c7213fadb9ae23cdfc09b3765}{\_dynamoDb}}.GetItemAsync(request);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Item\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ dbRepository.StartTime\ =\ response.Item[\textcolor{stringliteral}{"{}StartTime"{}}].S;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ dbRepository.BlockName\ =\ response.Item[\textcolor{stringliteral}{"{}BlockName"{}}].S;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ dbRepository.LeagueName\ =\ response.Item[\textcolor{stringliteral}{"{}LeagueName"{}}].S;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ dbRepository.MatchTeams\ =\ response.Item[\textcolor{stringliteral}{"{}MatchTeams"{}}].SS.ToList();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ dbRepository.MatchID\ =\ response.Item[\textcolor{stringliteral}{"{}MatchID"{}}].S;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a5142d00b21f492b6811627d66754878f}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_a5142d00b21f492b6811627d66754878f} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!PostDataToBd@{PostDataToBd}}
+\index{PostDataToBd@{PostDataToBd}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{PostDataToBd()}{PostDataToBd()}}
+{\footnotesize\ttfamily async Task Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+Post\+Data\+To\+Bd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}]{db\+Repository }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_a14a230379f1c40725ea157f5a9a12108}{Lo\+LAPI.\+Clients.\+IDynamo\+Db\+Client}}.
+
+
+
+Definition at line \mbox{\hyperlink{_dynamo_db_client_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_dynamo_db_client_8cs_source}{Dynamo\+Db\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ PutItemRequest}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ TableName\ =\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_afd5485acfa4ec4a0734de10479cdcbe6}{\_tableName}},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ Item\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ AttributeValue>}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}RequestID"{}},\ \textcolor{keyword}{new}\ AttributeValue\{\ S\ =\ dbRepository.RequestID\ \}\ \},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}UserID"{}},\ \textcolor{keyword}{new}\ AttributeValue\{\ S\ =\ dbRepository.UserID\ \}\ \},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}StartTime"{}},\ \textcolor{keyword}{new}\ AttributeValue\{\ S\ =\ dbRepository.StartTime\ \}\ \},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}BlockName"{}},\ \textcolor{keyword}{new}\ AttributeValue\{\ S\ =\ dbRepository.BlockName\ \}\ \},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}LeagueName"{}},\ \textcolor{keyword}{new}\ AttributeValue\{\ S\ =\ dbRepository.LeagueName\ \}\ \},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}MatchTeams"{}},\ \textcolor{keyword}{new}\ AttributeValue\{\ SS\ =\ dbRepository.MatchTeams\ \}\ \},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}MatchID"{}},\ \textcolor{keyword}{new}\ AttributeValue\{\ S\ =\ dbRepository.MatchID\ \}\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ac785746c7213fadb9ae23cdfc09b3765}{\_dynamoDb}}.PutItemAsync(request);}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ac785746c7213fadb9ae23cdfc09b3765}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_ac785746c7213fadb9ae23cdfc09b3765} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!\_dynamoDb@{\_dynamoDb}}
+\index{\_dynamoDb@{\_dynamoDb}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{\_dynamoDb}{\_dynamoDb}}
+{\footnotesize\ttfamily readonly IAmazon\+Dynamo\+DB Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+\_\+dynamo\+Db\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_dynamo_db_client_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_dynamo_db_client_8cs_source}{Dynamo\+Db\+Client.\+cs}}.
+
+\Hypertarget{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_afd5485acfa4ec4a0734de10479cdcbe6}\label{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client_afd5485acfa4ec4a0734de10479cdcbe6} 
+\index{LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}!\_tableName@{\_tableName}}
+\index{\_tableName@{\_tableName}!LoLAPI.Clients.DynamoDbClient@{LoLAPI.Clients.DynamoDbClient}}
+\doxysubsubsection{\texorpdfstring{\_tableName}{\_tableName}}
+{\footnotesize\ttfamily string Lo\+LAPI.\+Clients.\+Dynamo\+Db\+Client.\+\_\+table\+Name}
+
+
+
+Definition at line \mbox{\hyperlink{_dynamo_db_client_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_dynamo_db_client_8cs_source}{Dynamo\+Db\+Client.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Clients/\mbox{\hyperlink{_dynamo_db_client_8cs}{Dynamo\+Db\+Client.\+cs}}\end{DoxyCompactItemize}

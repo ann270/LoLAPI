@@ -1,0 +1,230 @@
+\doxysection{Program.\+cs File Reference}
+\hypertarget{_program_8cs}{}\label{_program_8cs}\index{Program.cs@{Program.cs}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_abc3694a0e15618f2499e5a540264f833}{Add\+Controllers}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_a0d7859f9cad50e8e9fdf015100780e07}{Add\+Endpoints\+Api\+Explorer}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_ae0ce43c019a5621d731d0c622c793644}{Add\+Swagger\+Gen}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_a0651b1cc6b2ec2a500b3fbaaaba6ac6c}{Add\+Http\+Context\+Accessor}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_a0156c8561febd5f74b62969bf38cadde}{Add\+Singleton$<$ Player\+Details\+Client $>$}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_a087441760ebe0c5a04dfbc0bdff84a4d}{Add\+Singleton$<$ Schedule\+Client $>$}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_afe64afbe7f426a9e4d2cd46f0b4e2af6}{Add\+Singleton$<$ You\+Tube\+Client $>$}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_a97ece812b1cf4aa546e0f362d817841b}{Add\+Singleton$<$ Open\+AIClient $>$}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_a55c2cbfeca3a92fdec59efe0342f0c6f}{Add\+Singleton$<$ Champion\+Skins\+Client $>$}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_abc7eccf69f0a9bb0f9f68958fa35f2cd}{Add\+Singleton$<$ IAmazon\+Dynamo\+DB $>$}} (\mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}})
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_acdad66fe5c4df5e75169ef0294a98ccc}{Add\+Singleton$<$ IDynamo\+DBContext, Dynamo\+DBContext $>$}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_a0ba058c0eb1a337a94c74483c285805e}{Add\+Singleton$<$ IDynamo\+Db\+Client, Dynamo\+Db\+Client $>$}} ()
+\item 
+\mbox{\hyperlink{_program_8cs_a79a944c7f0e25196ca3c5a8638b919b9}{if}} (app.\+Environment.\+Is\+Development())
+\item 
+app. \mbox{\hyperlink{_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9}{Use\+Https\+Redirection}} ()
+\item 
+app. \mbox{\hyperlink{_program_8cs_af6f72d752b2e73aa0292f74bd13237ab}{Use\+Authorization}} ()
+\item 
+app. \mbox{\hyperlink{_program_8cs_a9e2ee3170aa6279b68eefd1651f7d96c}{Map\+Controllers}} ()
+\item 
+app. \mbox{\hyperlink{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd}{Run}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} = Web\+Application.\+Create\+Builder(args)
+\item 
+var \mbox{\hyperlink{_program_8cs_a2c077bf27a3193ddb72b97f4666ae219}{credentials}} = new Basic\+AWSCredentials(Constants.\+Access\+Key, Constants.\+Secret\+Key)
+\item 
+var \mbox{\hyperlink{_program_8cs_aeac120c9ce32d189166215752b0b1a76}{config}}
+\item 
+var \mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}} = new Amazon\+Dynamo\+DBClient(\mbox{\hyperlink{_program_8cs_a2c077bf27a3193ddb72b97f4666ae219}{credentials}}, \mbox{\hyperlink{_program_8cs_aeac120c9ce32d189166215752b0b1a76}{config}})
+\item 
+var \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} = builder.\+Build()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_program_8cs_abc3694a0e15618f2499e5a540264f833}\label{_program_8cs_abc3694a0e15618f2499e5a540264f833} 
+\index{Program.cs@{Program.cs}!AddControllers@{AddControllers}}
+\index{AddControllers@{AddControllers}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddControllers()}{AddControllers()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Controllers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a0d7859f9cad50e8e9fdf015100780e07}\label{_program_8cs_a0d7859f9cad50e8e9fdf015100780e07} 
+\index{Program.cs@{Program.cs}!AddEndpointsApiExplorer@{AddEndpointsApiExplorer}}
+\index{AddEndpointsApiExplorer@{AddEndpointsApiExplorer}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddEndpointsApiExplorer()}{AddEndpointsApiExplorer()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Endpoints\+Api\+Explorer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a0651b1cc6b2ec2a500b3fbaaaba6ac6c}\label{_program_8cs_a0651b1cc6b2ec2a500b3fbaaaba6ac6c} 
+\index{Program.cs@{Program.cs}!AddHttpContextAccessor@{AddHttpContextAccessor}}
+\index{AddHttpContextAccessor@{AddHttpContextAccessor}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddHttpContextAccessor()}{AddHttpContextAccessor()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Http\+Context\+Accessor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a55c2cbfeca3a92fdec59efe0342f0c6f}\label{_program_8cs_a55c2cbfeca3a92fdec59efe0342f0c6f} 
+\index{Program.cs@{Program.cs}!AddSingleton$<$ ChampionSkinsClient $>$@{AddSingleton$<$ ChampionSkinsClient $>$}}
+\index{AddSingleton$<$ ChampionSkinsClient $>$@{AddSingleton$<$ ChampionSkinsClient $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddSingleton$<$ ChampionSkinsClient $>$()}{AddSingleton< ChampionSkinsClient >()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Singleton$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}{Champion\+Skins\+Client}} $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_abc7eccf69f0a9bb0f9f68958fa35f2cd}\label{_program_8cs_abc7eccf69f0a9bb0f9f68958fa35f2cd} 
+\index{Program.cs@{Program.cs}!AddSingleton$<$ IAmazonDynamoDB $>$@{AddSingleton$<$ IAmazonDynamoDB $>$}}
+\index{AddSingleton$<$ IAmazonDynamoDB $>$@{AddSingleton$<$ IAmazonDynamoDB $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddSingleton$<$ IAmazonDynamoDB $>$()}{AddSingleton< IAmazonDynamoDB >()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Singleton$<$ IAmazon\+Dynamo\+DB $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a0ba058c0eb1a337a94c74483c285805e}\label{_program_8cs_a0ba058c0eb1a337a94c74483c285805e} 
+\index{Program.cs@{Program.cs}!AddSingleton$<$ IDynamoDbClient, DynamoDbClient $>$@{AddSingleton$<$ IDynamoDbClient, DynamoDbClient $>$}}
+\index{AddSingleton$<$ IDynamoDbClient, DynamoDbClient $>$@{AddSingleton$<$ IDynamoDbClient, DynamoDbClient $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddSingleton$<$ IDynamoDbClient, DynamoDbClient $>$()}{AddSingleton< IDynamoDbClient, DynamoDbClient >()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Singleton$<$ \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client}{IDynamo\+Db\+Client}}, \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_dynamo_db_client}{Dynamo\+Db\+Client}} $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_acdad66fe5c4df5e75169ef0294a98ccc}\label{_program_8cs_acdad66fe5c4df5e75169ef0294a98ccc} 
+\index{Program.cs@{Program.cs}!AddSingleton$<$ IDynamoDBContext, DynamoDBContext $>$@{AddSingleton$<$ IDynamoDBContext, DynamoDBContext $>$}}
+\index{AddSingleton$<$ IDynamoDBContext, DynamoDBContext $>$@{AddSingleton$<$ IDynamoDBContext, DynamoDBContext $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddSingleton$<$ IDynamoDBContext, DynamoDBContext $>$()}{AddSingleton< IDynamoDBContext, DynamoDBContext >()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Singleton$<$ IDynamo\+DBContext, Dynamo\+DBContext $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a97ece812b1cf4aa546e0f362d817841b}\label{_program_8cs_a97ece812b1cf4aa546e0f362d817841b} 
+\index{Program.cs@{Program.cs}!AddSingleton$<$ OpenAIClient $>$@{AddSingleton$<$ OpenAIClient $>$}}
+\index{AddSingleton$<$ OpenAIClient $>$@{AddSingleton$<$ OpenAIClient $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddSingleton$<$ OpenAIClient $>$()}{AddSingleton< OpenAIClient >()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Singleton$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client}{Open\+AIClient}} $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a0156c8561febd5f74b62969bf38cadde}\label{_program_8cs_a0156c8561febd5f74b62969bf38cadde} 
+\index{Program.cs@{Program.cs}!AddSingleton$<$ PlayerDetailsClient $>$@{AddSingleton$<$ PlayerDetailsClient $>$}}
+\index{AddSingleton$<$ PlayerDetailsClient $>$@{AddSingleton$<$ PlayerDetailsClient $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddSingleton$<$ PlayerDetailsClient $>$()}{AddSingleton< PlayerDetailsClient >()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Singleton$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client}{Player\+Details\+Client}} $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a087441760ebe0c5a04dfbc0bdff84a4d}\label{_program_8cs_a087441760ebe0c5a04dfbc0bdff84a4d} 
+\index{Program.cs@{Program.cs}!AddSingleton$<$ ScheduleClient $>$@{AddSingleton$<$ ScheduleClient $>$}}
+\index{AddSingleton$<$ ScheduleClient $>$@{AddSingleton$<$ ScheduleClient $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddSingleton$<$ ScheduleClient $>$()}{AddSingleton< ScheduleClient >()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Singleton$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client}{Schedule\+Client}} $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_afe64afbe7f426a9e4d2cd46f0b4e2af6}\label{_program_8cs_afe64afbe7f426a9e4d2cd46f0b4e2af6} 
+\index{Program.cs@{Program.cs}!AddSingleton$<$ YouTubeClient $>$@{AddSingleton$<$ YouTubeClient $>$}}
+\index{AddSingleton$<$ YouTubeClient $>$@{AddSingleton$<$ YouTubeClient $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddSingleton$<$ YouTubeClient $>$()}{AddSingleton< YouTubeClient >()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Singleton$<$ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_you_tube_client}{You\+Tube\+Client}} $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_ae0ce43c019a5621d731d0c622c793644}\label{_program_8cs_ae0ce43c019a5621d731d0c622c793644} 
+\index{Program.cs@{Program.cs}!AddSwaggerGen@{AddSwaggerGen}}
+\index{AddSwaggerGen@{AddSwaggerGen}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddSwaggerGen()}{AddSwaggerGen()}}
+{\footnotesize\ttfamily builder.\+Services. Add\+Swagger\+Gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a79a944c7f0e25196ca3c5a8638b919b9}\label{_program_8cs_a79a944c7f0e25196ca3c5a8638b919b9} 
+\index{Program.cs@{Program.cs}!if@{if}}
+\index{if@{if}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{app\+::\+Environment\+::\+Is\+Development()}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_program_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseSwagger();}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseSwaggerUI();}
+\DoxyCodeLine{00041\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_program_8cs_a9e2ee3170aa6279b68eefd1651f7d96c}\label{_program_8cs_a9e2ee3170aa6279b68eefd1651f7d96c} 
+\index{Program.cs@{Program.cs}!MapControllers@{MapControllers}}
+\index{MapControllers@{MapControllers}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{MapControllers()}{MapControllers()}}
+{\footnotesize\ttfamily app. Map\+Controllers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd}\label{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd} 
+\index{Program.cs@{Program.cs}!Run@{Run}}
+\index{Run@{Run}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily app. Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_af6f72d752b2e73aa0292f74bd13237ab}\label{_program_8cs_af6f72d752b2e73aa0292f74bd13237ab} 
+\index{Program.cs@{Program.cs}!UseAuthorization@{UseAuthorization}}
+\index{UseAuthorization@{UseAuthorization}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{UseAuthorization()}{UseAuthorization()}}
+{\footnotesize\ttfamily app. Use\+Authorization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9}\label{_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9} 
+\index{Program.cs@{Program.cs}!UseHttpsRedirection@{UseHttpsRedirection}}
+\index{UseHttpsRedirection@{UseHttpsRedirection}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{UseHttpsRedirection()}{UseHttpsRedirection()}}
+{\footnotesize\ttfamily app. Use\+Https\+Redirection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}\label{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d} 
+\index{Program.cs@{Program.cs}!app@{app}}
+\index{app@{app}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily var app = builder.\+Build()}
+
+
+
+Definition at line \mbox{\hyperlink{_program_8cs_source_l00034}{34}} of file \mbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+\Hypertarget{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}\label{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5} 
+\index{Program.cs@{Program.cs}!builder@{builder}}
+\index{builder@{builder}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{builder}{builder}}
+{\footnotesize\ttfamily var builder = Web\+Application.\+Create\+Builder(args)}
+
+
+
+Definition at line \mbox{\hyperlink{_program_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+\Hypertarget{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}\label{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7} 
+\index{Program.cs@{Program.cs}!client@{client}}
+\index{client@{client}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily var client = new Amazon\+Dynamo\+DBClient(\mbox{\hyperlink{_program_8cs_a2c077bf27a3193ddb72b97f4666ae219}{credentials}}, \mbox{\hyperlink{_program_8cs_aeac120c9ce32d189166215752b0b1a76}{config}})}
+
+
+
+Definition at line \mbox{\hyperlink{_program_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+\Hypertarget{_program_8cs_aeac120c9ce32d189166215752b0b1a76}\label{_program_8cs_aeac120c9ce32d189166215752b0b1a76} 
+\index{Program.cs@{Program.cs}!config@{config}}
+\index{config@{config}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily var config}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}\ AmazonDynamoDBConfig()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ RegionEndpoint\ =\ RegionEndpoint.EUNorth1}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_program_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+\Hypertarget{_program_8cs_a2c077bf27a3193ddb72b97f4666ae219}\label{_program_8cs_a2c077bf27a3193ddb72b97f4666ae219} 
+\index{Program.cs@{Program.cs}!credentials@{credentials}}
+\index{credentials@{credentials}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{credentials}{credentials}}
+{\footnotesize\ttfamily var credentials = new Basic\+AWSCredentials(Constants.\+Access\+Key, Constants.\+Secret\+Key)}
+
+
+
+Definition at line \mbox{\hyperlink{_program_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+

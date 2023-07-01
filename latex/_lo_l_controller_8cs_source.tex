@@ -1,0 +1,117 @@
+\doxysection{Lo\+LController.\+cs}
+\hypertarget{_lo_l_controller_8cs_source}{}\label{_lo_l_controller_8cs_source}\index{Controllers/LoLController.cs@{Controllers/LoLController.cs}}
+\mbox{\hyperlink{_lo_l_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_lo_l_a_p_i_1_1_clients}{LoLAPI.Clients}};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_lo_l_a_p_i_1_1_models}{LoLAPI.Models}};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Newtonsoft.Json.Linq;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00006}\mbox{\hyperlink{namespace_lo_l_a_p_i_1_1_controllers}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_lo_l_a_p_i_1_1_controllers}{LoLAPI.Controllers}};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00008}00008\ [ApiController]}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00009}00009\ [Route(\textcolor{stringliteral}{"{}[controller]"{}})]}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00010}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller}{LoLController}}\ :\ ControllerBase}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00012}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ae33911536db8d85530ec9479d5b87178}{00012}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ ILogger<LoLController>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ae33911536db8d85530ec9479d5b87178}{\_logger}};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00013}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a88a06a25dd8b6374dbf66530dfad9906}{00013}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client}{PlayerDetailsClient}}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a88a06a25dd8b6374dbf66530dfad9906}{\_playerDetails}};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00014}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a89d445a192e896adb5109c487ab9fa1e}{00014}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client}{ScheduleClient}}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a89d445a192e896adb5109c487ab9fa1e}{\_scheduleClient}};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00015}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}{00015}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client}{IDynamoDbClient}}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}{\_dynamoDbClient}};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00016}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ab49ec546c697e0d5e8743f1401c99b3b}{00016}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_you_tube_client}{YouTubeClient}}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ab49ec546c697e0d5e8743f1401c99b3b}{\_youTubeClient}};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00017}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_abe77ffb1bd1808de50cebf9b0c899f28}{00017}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}{ChampionSkinsClient}}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_abe77ffb1bd1808de50cebf9b0c899f28}{\_championSkinsClient}};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00019}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_aa07d13fa488a35a2fc7576de2ed4e8f4}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_aa07d13fa488a35a2fc7576de2ed4e8f4}{LoLController}}(ILogger<LoLController>\ logger,\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client}{PlayerDetailsClient}}\ playerDetailsClient,\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client}{ScheduleClient}}\ scheduleClient,\ \mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client}{IDynamoDbClient}}\ dynamoDbClient,\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_you_tube_client}{YouTubeClient}}\ youTubeClient,\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client}{OpenAIClient}}\ openAiClient,\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client}{ChampionSkinsClient}}\ championSkinsClient)}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ae33911536db8d85530ec9479d5b87178}{\_logger}}\ =\ logger;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a88a06a25dd8b6374dbf66530dfad9906}{\_playerDetails}}\ =\ playerDetailsClient;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a89d445a192e896adb5109c487ab9fa1e}{\_scheduleClient}}\ =\ scheduleClient;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}{\_dynamoDbClient}}\ =\ dynamoDbClient;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ab49ec546c697e0d5e8743f1401c99b3b}{\_youTubeClient}}\ =\ youTubeClient;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_abe77ffb1bd1808de50cebf9b0c899f28}{\_championSkinsClient}}\ =\ championSkinsClient;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00029}00029\ \ \ \ \ [HttpGet(\textcolor{stringliteral}{"{}GetAccountStatistic"{}})]}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00030}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a121538405273cb77ad2c2b1ef4d1e7bf}{00030}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<List<PlayerDetails>>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a121538405273cb77ad2c2b1ef4d1e7bf}{GetPlayerDetails}}([FromQuery]\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_player_parameters}{PlayerParameters}}\ parameters)}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ var\ player\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a88a06a25dd8b6374dbf66530dfad9906}{\_playerDetails}}.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_player_details_client_a445519b6a2521ac2c7ab46082f4a7de4}{GetPlayerDetails}}(parameters.Username,\ parameters.Region);}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ player;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00036}00036\ \ \ \ \ [HttpGet(\textcolor{stringliteral}{"{}GetChampionSkins"{}})]}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00037}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_af307d6b13c8f9758ce59825f30a42652}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ChampionSkins>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_af307d6b13c8f9758ce59825f30a42652}{GetChampionSkins}}([FromQuery]\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_champion_skins_parameters}{ChampionSkinsParameters}}\ championSkinsParameters)}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ var\ champion\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_abe77ffb1bd1808de50cebf9b0c899f28}{\_championSkinsClient}}.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_champion_skins_client_ae61c4783bd8ceef5304c8ee961a5a225}{GetChampionSkins}}(championSkinsParameters.Name);}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ champion;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00043}00043\ \ \ \ \ [HttpGet(\textcolor{stringliteral}{"{}GetSchedule"{}})]}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00044}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a1400e3d80fc246549aa77fc6616a6f8d}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ <EsportsSchedule>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a1400e3d80fc246549aa77fc6616a6f8d}{GetSchedule}}()}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00045}00045\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ var\ schedule\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a89d445a192e896adb5109c487ab9fa1e}{\_scheduleClient}}.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_schedule_client_a9e48f9371189442e2a4f12893608c171}{GetSchedule}}();}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ schedule;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00051}00051\ \ \ \ \ [HttpPost(\textcolor{stringliteral}{"{}AddToDB"{}})]}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00052}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3a73ff25907fd54a90e81c3d251dd5f1}{00052}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3a73ff25907fd54a90e81c3d251dd5f1}{AddToDb}}([FromBody]\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}\ dbRepository,\ [FromServices]\ IHttpContextAccessor\ httpContextAccessor)}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00053}00053\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ RequestID\ =\ httpContextAccessor.HttpContext.TraceIdentifier;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ dbRepository.RequestID\ =\ RequestID;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}{\_dynamoDbClient}}.\mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_a14a230379f1c40725ea157f5a9a12108}{PostDataToBd}}(dbRepository);}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok();}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00060}00060\ \ \ \ \ [HttpGet(\textcolor{stringliteral}{"{}GetDataFromDB"{}})]}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00061}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_afcbf4608c71deecd697ab78fdef9d121}{00061}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_afcbf4608c71deecd697ab78fdef9d121}{GetDataFromDB}}(\textcolor{keywordtype}{string}\ requestID,\ \textcolor{keywordtype}{string}\ userID)}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00062}00062\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}\ dbRepository\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ RequestID\ =\ requestID,}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ UserID\ =\ userID}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}{\_dynamoDbClient}}.\mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_ab9cf068cbe34dc81006bbe4c7465045b}{GetDataFromDB}}(dbRepository);}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok(dbRepository);}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00071}00071\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00072}00072\ \ \ \ \ [HttpDelete(\textcolor{stringliteral}{"{}DeleteDataFromDB"{}})]}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00073}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a56ec859577e30957f99ff3265c4eabc5}{00073}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a56ec859577e30957f99ff3265c4eabc5}{DeleteDataFromDB}}(\textcolor{keywordtype}{string}\ requestID,\ \textcolor{keywordtype}{string}\ userID)}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00074}00074\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}\ dbRepository\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_d_b_repository}{DBRepository}}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ RequestID\ =\ requestID,}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ UserID\ =\ userID}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a3da7d2b70b4980103f25b77210661236}{\_dynamoDbClient}}.\mbox{\hyperlink{interface_lo_l_a_p_i_1_1_clients_1_1_i_dynamo_db_client_aaa8548f5df3d2f6e72bd19b2ad28b6f8}{DeleteDataFromDB}}(dbRepository);}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok();}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00085}00085\ \ \ \ \ [HttpGet(\textcolor{stringliteral}{"{}YouTubeSearch"{}})]}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00086}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a04ddce945b6f7019e2e7f9c520dad7cb}{00086}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<YouTubeRepository>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a04ddce945b6f7019e2e7f9c520dad7cb}{GetYouTubeVideo}}([FromQuery]\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_you_tube_parameters}{YouTubeParameters}}\ parameters)}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00087}00087\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ var\ search\ =\ await\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_ab49ec546c697e0d5e8743f1401c99b3b}{\_youTubeClient}}.\mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_you_tube_client_a869d14fc53c59b00333683eba5a51a68}{GetYouTubeVideo}}(parameters.Keyword);}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ search;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00090}00090\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00092}00092\ \ \ \ \ [HttpPost(\textcolor{stringliteral}{"{}OpenAI"{}})]}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00093}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_aa580e53409bae6410964afcbbc6bb7ad}{00093}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ActionResult<OpenAiResponse>>\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_aa580e53409bae6410964afcbbc6bb7ad}{OpenAi}}([FromBody]\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_open_ai_repository}{OpenAiRepository}}\ openAiRepository)}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00094}00094\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ var\ \mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_clients_1_1_open_a_i_client}{OpenAIClient}}();}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ var\ result\ =\ await\ \mbox{\hyperlink{_program_8cs_af46081dcabb4da1ee7ca00228506bcb7}{client}}.OpenAI(openAiRepository.messages.FirstOrDefault()?.content);}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ var\ openAiResponse\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_models_1_1_open_ai_response}{OpenAiResponse}}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a7530c067158f737744fbbf00d037bf96}{ParseContentFromSwaggerResponse}}(result)}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok(openAiResponse);}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00102}00102\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00103}00103\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00104}\mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a7530c067158f737744fbbf00d037bf96}{00104}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lo_l_a_p_i_1_1_controllers_1_1_lo_l_controller_a7530c067158f737744fbbf00d037bf96}{ParseContentFromSwaggerResponse}}(\textcolor{keywordtype}{string}\ swaggerResponse)}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00105}00105\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ var\ parsedResponse\ =\ JObject.Parse(swaggerResponse);}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ var\ content\ =\ parsedResponse[\textcolor{stringliteral}{"{}choices"{}}]?.FirstOrDefault()?[\textcolor{stringliteral}{"{}message"{}}]?[\textcolor{stringliteral}{"{}content"{}}]?.ToString();}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ content;}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00110}00110\ \}}
+\DoxyCodeLine{\Hypertarget{_lo_l_controller_8cs_source_l00111}00111\ }
+
+\end{DoxyCode}
